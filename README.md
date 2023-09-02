@@ -1,9 +1,6 @@
 # IPAdapter-ComfyUI 
 This is a custom node for [IP-Adapter](https://github.com/tencent-ailab/IP-Adapter) in [ComfyUI](https://github.com/comfyanonymous/ComfyUI).
 
-2023/08/27:
-Specifications for the plus model have been updated, and the node now supports multiple images and area selection via masks.
-
 # Install
 
 1. Clone into custom_nodes
