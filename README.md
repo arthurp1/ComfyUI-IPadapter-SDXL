@@ -7,15 +7,15 @@ Specifications for the plus model have been updated, and the node now supports m
 # Install
 
 1. Clone into custom_nodes
-2. Place the IP-Adapter model in `IPAdapter-ComfyUI/models` (e.g., [Model for SDv1.5](https://huggingface.co/h94/IP-Adapter/blob/main/models/ip-adapter_sd15.bin)).
-3. Place the CLIP_vision model in `ComfyUI/models/clip_vision` (e.g., [Model for SDv1.5](https://huggingface.co/h94/IP-Adapter/blob/main/models/image_encoder/pytorch_model.bin)).
+2. Place the IP-Adapter in `ComfyUI/custom_nodes/IPAdapter-ComfyUI/models` (e.g., [ip-adapter_sdxl.bin](https://huggingface.co/h94/IP-Adapter/blob/main/sdxl_models/ip-adapter_sdxl.bin)).
+3. Place the CLIP_vision model in `ComfyUI/models/clip_vision` (e.g., [pytorch_model.bin]([https://huggingface.co/h94/IP-Adapter/blob/main/models/image_encoder/pytorch_model.bin](https://huggingface.co/h94/IP-Adapter/blob/main/sdxl_models/image_encoder/pytorch_model.bin)).
 
 # Usage
-Refer to `ip-adapter.json`.
+Start ComfyUI and load the workflow `ip-adapter.json`.
 
-## Input
-+ **model**: Connect the model. The order in which it's connected with, for example, LoRALoader, doesn't matter.
-+ **image**: Connect the image.
+## Required Inputs
++ **model**: Connect the SDXL base and refiner models.
++ **image**: Reference image.
 + **clip_vision**: Connect to the output of `Load CLIP Vision`.
 + **mask**: Optional. Connect a mask to limit the area of application. The mask should have the same resolution as the generated image.
 + **weight**: Strength of the application.
@@ -39,6 +39,3 @@ The background also gets split, which could be an issue.
 
 # Models
 + Official models: https://huggingface.co/h94/IP-Adapter
-+ My models: https://huggingface.co/furusu/IP-Adapter
-
-# CITATION
