@@ -23,14 +23,6 @@ Start ComfyUI and load the workflow `ip-adapter.json`.
 + **MODEL**: Connect to KSampler, etc.
 + **CLIP_VISION_OUTPUT**: Normally you don't have to worry about it. Can save unnecessary calculations when using Revision, etc.
 
-## Multiple conditions.
-By naturally connecting the nodes, multiple images can be input. By combining with Mask, you can also conditionally divide the left and right.
-![image](https://github.com/laksjdjf/IPAdapter-ComfyUI/assets/22386664/c2282aee-ab98-488d-936e-1787994e957f)
-The background also gets split, which could be an issue.
-
-# Hint
-+ The input image is automatically cropped to a square in the center, so if you want to avoid this, you can either manually crop it beforehand or use `preprocess/furusu Image crop`. For `preprocess/furusu Image crop`, there are options to pad the image (`padding`) or to crop based on the character's face (`face_crop`). The required [lbpcascade_animeface.xml](https://github.com/nagadomi/lbpcascade_animeface) might not be automatically downloaded, so in that case, please manually place it in the root directory of the repository.
-
 # Bug
 + For some reason, `Apply ControlNet` bugs out, so please use `Apply ControlNet(Advanced)` as an alternative.
 
